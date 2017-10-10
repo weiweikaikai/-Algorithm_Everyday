@@ -42,7 +42,6 @@ void hex2bin(char *dst,const char* src,int len)
 int main(){
 
     const char*src="41414141414141414141414141414141";
-    // const char*src="11000000000000000000000000000000";
     char md5[16]={'\0'};
 
     hex2bin(md5,src,16);

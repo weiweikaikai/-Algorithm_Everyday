@@ -15,6 +15,9 @@ using namespace std;
 //一个无限长的数字序列 数字k 在该序列中出现的次数也是k次
 //eg: 1,2,2,3,3,3........   第n项数字是几  n>=0 n<=10^18
 
+
+
+
 long long FindNnum(long long num){
 
     if(num < 1){
