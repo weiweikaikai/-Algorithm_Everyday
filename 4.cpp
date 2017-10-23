@@ -18,11 +18,15 @@ using namespace std;
 //第5座金矿  200金  需要3人
 //应该选择挖那几座金矿保证挖的金币数量最多?
 
+//1.暴力求解 
+//2.动态规划 (最优子结构   边界  状态转移方程式)
 
 void answer(int *glod,int *usewoker,int glodnum,int worker)
 {
    
-
+   if(glodnum <=1 && worker < usewoker[glodnum])
+       return 0;
+   if()
 
 
 
