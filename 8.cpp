@@ -39,17 +39,26 @@ void MaxWindow(int *arr,int n,int w,int *result) //time:O(n) room:O(n)
     }
 }
 
-
-int main()
+void test1()
 {
     int arr[] = {4, 3, 5, 4, 3, 3, 6, 7};
     int n = 8;
     int w = 3;
     int result[n-w+1];
     MaxWindow(arr,n,w,result);
+    cout<<"max_list: ";
     for (int i=0;i<n-w+1;++i) {
-        cout<<result[i]<<endl;
+        cout<<result[i]<<",";
     }
+    cout<<endl;
+
+}
+
+
+
+int main()
+{
+   test1();
     return 0;
 }
 
