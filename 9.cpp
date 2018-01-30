@@ -32,16 +32,16 @@ int max(int lhs,int rhs) {
 //target = max {f[j]} , 其中1 ≤ j ≤ n
 
 int MaxSubArray_1(int *arr ,int n) { //O(N) O(1)
-   if (arr == NULL || n <= 1) {
-     return -1;
-   }
-   int sum =0;
-   int result = INT_MIN;
-   for (int i=0; i<n; ++i)  {
-       sum = max(sum+arr[i], arr[i]);
-       result = max(result,sum);
-   }
-   return result;
+    if (arr == NULL || n <= 1) {
+        return -1;
+    }
+    int sum =0;
+    int result = INT_MIN;
+    for (int i=0; i<n; ++i)  {
+        sum = max(sum+arr[i], arr[i]);
+        result = max(result,sum);
+    }
+    return result;
 }
 //普通方法 
 int MaxSubArray_2(int *arr ,int n) { //O(N) O(1)
@@ -53,13 +53,13 @@ int MaxSubArray_2(int *arr ,int n) { //O(N) O(1)
     int result = INT_MIN;
     for (int i=0;i<n;++i) {
         if (sum <= 0) {
-           sum = arr[i];
+            sum = arr[i];
         } else {
-           sum += arr[i];
+            sum += arr[i];
         }
-       result = sum > result ? sum : result;
+        result = sum > result ? sum : result;
     }
-   return result;
+    return result;
 }
 
 void test() {
@@ -68,17 +68,17 @@ void test() {
     cout<< MaxSubArray_1(arr,7)<<endl;
     cout<< MaxSubArray_2(arr,7)<<endl;
     for(int i=0;i<vec.size();++i) {
-     cout<<vec[i]<<endl; 
+        cout<<vec[i]<<endl; 
     }
-    
+
 }
 
 
 int main()
 {
- test();
-    
-    
+    test();
+
+
     return 0;
 }
 
